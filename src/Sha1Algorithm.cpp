@@ -7,7 +7,7 @@
 
 namespace Sha1Algorithm {
 
-    std::vector<uint32_t> splitMessageIn16Of32Bits(std::string str, int offset) {
+    static std::vector<uint32_t> splitMessageIn16Of32Bits(std::string str, int offset) {
         std::vector<uint32_t> output;
 
         if ((str.length() * 8) < (offset+1) * 512) {
@@ -33,7 +33,7 @@ namespace Sha1Algorithm {
         return output;
     }
 
-    uint32_t leftRotate(int n, uint32_t d) {
+    static uint32_t leftRotate(int n, uint32_t d) {
         uint32_t aux = (d >> (32 - n));
         return (d << n) | aux;
     }
