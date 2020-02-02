@@ -39,7 +39,7 @@ namespace Sha1Algorithm {
     }
 
     std::string Sha1Hash(const std::vector<uint8_t>& data){
-        return nullptr;
+        return Sha1Hash(std::string(data.begin(), data.end()));
     }
 
     std::string Sha1Hash(const std::string& data){

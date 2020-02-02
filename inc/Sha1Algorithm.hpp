@@ -12,7 +12,7 @@ namespace Sha1Algorithm {
      * described in [RFC3174](https://tools.ietf.org/html/rfc3174)
      */
     
-    std::string Sha1Hash(const std::vector<char>& data);
+    std::string Sha1Hash(const std::vector<uint8_t>& data);
     std::string Sha1Hash(const std::string& data);
 
 }
